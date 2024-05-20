@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/4a24fc7d8b.js" crossorigin="anonymous"></script>
+    <title>Đọc truyện online, đọc truyện hay</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: var(--lightmode_background);">
+    <div id="wrap">
+        <div id="nav">
+            <div class="container">
+                <div class="logo">HuStory</div>
+                <div class="controller">
+                    <div class="category nav-button-wrapper">
+                        <div class="nav-button">
+                            <i class="fa-solid fa-list"></i>
+                            Thể loại
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <div class="category-list nav-list">
+                            <div class="">
+                                <ul class="dropdown-list">
+                                    <li><a href="./list.html">Tiên Hiệp</a></li>
+                                    <li><a href="./list.html">Kiếm hiệp</a></li>
+                                    <li><a href="./list.html">Ngôn Tình</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="">
+                                <ul class="dropdown-list">
+                                    <li><a href="./list.html">Tiên Hiệp</a></li>
+                                    <li><a href="./list.html">Kiếm hiệp</a></li>
+                                    <li><a href="./list.html">Ngôn Tình</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="">
+                                <ul class="dropdown-list">
+                                    <li><a href="./list.html">Tiên Hiệp</a></li>
+                                    <li><a href="./list.html">Kiếm hiệp</a></li>
+                                    <li><a href="./list.html">Ngôn Tình</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="length nav-button-wrapper">
+                        <div class="nav-button">
+                            <i class="fa-solid fa-list"></i>
+                            Độ dài
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <ul class="length-list nav-list dropdown-list">
+                            <li><a href="./list.html">Dưới 100 chương</a></li>
+                            <li><a href="./list.html">100-500 chương</a></li>
+                            <li><a href="./list.html">500-1000 chương</a></li>
+                            <li><a href="./list.html">Trên 1000 chương</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="setting nav-button-wrapper">
+                        <div class="nav-button">
+                            <i class="fa-solid fa-list"></i>
+                            Cài đặt
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+
+                        <ul class="setting-list nav-list dropdown-list">
+                            <li>
+                                <a>
+                                    <label for="dark-mode">
+                                        <i class="fa-solid fa-moon"></i>
+                                        Darkmode
+                                    </label>
+                                    <input type="radio" name="theme" id="dark-mode">
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <label for="light-mode">
+                                        <i class="fa-solid fa-sun"></i>
+                                        Lightmode
+                                    </label>
+                                    <input type="radio" name="theme" id="light-mode">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="search-box nav-button-wrapper">
+                        <div class="search-input">
+                            <input type="text" placeholder="Tìm truyện...">
+                        </div>
+                        <div class="search-button">
+                            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="user-box nav-button-wrapper">
+                        <div class="nav-button">Đăng ký</div>
+                        <div class="nav-button">Đăng nhập</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container" id="popular-recently">
+            <div class="header">
+                <div class="header-title">Truyện Hot <i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="select-category-wrapper">
+                    <select class="select-category" id = "popular-select">
+                        <option value="Tất cả">Tất cả</option>
+                        <option value="Tiên hiệp">Tiên hiệp</option>
+                        <option value="Kiếm hiệp">Kiếm hiệp</option>
+                        <option value="Ngôn tình">Ngôn tình</option>
+                    </select>
+                </div>
+            </div>
+            <div class="popular-content row-wrapper">
+                <div class="row">
+                    <a class="popular-item item-no-1" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-2" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-3" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-4" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-5" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-6" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-7" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-8" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+                </div>
+
+                <div class="row">
+                    <a class="popular-item item-no-1" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-2" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-3" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-4" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-5" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-6" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-7" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+    
+                    <a class="popular-item item-no-8" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="popular-item-title"><h3>Đế Bá</h3></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="upload-recently">
+            <div class="upload-recently-wrapper">
+                <div class="header">
+                    <div class="header-title">
+                        Truyện mới cập nhật
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+    
+                    <div class="select-category-wrapper">
+                        <select class="select-category" id = "popular-select">
+                            <option value="Tất cả">Tất cả</option>
+                            <option value="Tiên hiệp">Tiên hiệp</option>
+                            <option value="Kiếm hiệp">Kiếm hiệp</option>
+                            <option value="Ngôn tình">Ngôn tình</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="upload-content">
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+
+                    <div class="upload-item item-no-1">
+                        <div class="upload-title">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <a href="./story.html">Đế Bá</a>
+                        </div>
+                        <div class="upload-category">
+                            <p class="upload-category-no1"><a href="./list.html">Huyền huyễn</a></p>,
+                            <p class="upload-category-no2"><a href="./list.html">Tiên hiệp</a></p>
+                        </div>
+                        <div class="upload-chapter">
+                            <a href="./chapter.html">Chương 1978</a>
+                        </div>
+                        <div class="upload-time">
+                            50 phút trước
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <div class="navigation-reading-recently ">
+                    <div class="header">
+                        <div class="header-title">Đọc gần đây</div>
+                    </div> 
+                    <div class="reading-recently-wrapper">
+                        <div class="reading-recently-item">
+                            <div class="reading-recently-title">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="">Đế Bá</a>
+                            </div>
+                            <div class="reading-recently-chapter">
+                                <a href="">
+                                    Đọc tiếp C1976
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="reading-recently-item">
+                            <div class="reading-recently-title">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="">Đế Bá</a>
+                            </div>
+                            <div class="reading-recently-chapter">
+                                <a href="">
+                                    Đọc tiếp C1976
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="reading-recently-item">
+                            <div class="reading-recently-title">
+                                <i class="fa-solid fa-angle-right"></i>
+                                <a href="">Đế Bá</a>
+                            </div>
+                            <div class="reading-recently-chapter">
+                                <a href="">
+                                    Đọc tiếp C1976
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-category">
+                    <div class="header">
+                        <div class="header-title">Thể loại</div>
+                    </div> 
+                    <div class="navigation-category-wrapper">
+                        <ul>
+                            <li><a href="./list.html">Tiên Hiệp</a></li>
+                            <li><a href="./list.html">Kiếm hiệp</a></li>
+                            <li><a href="./list.html">Ngôn Tình</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><a href="./list.html">Tiên Hiệp</a></li>
+                            <li><a href="./list.html">Kiếm hiệp</a></li>
+                            <li><a href="./list.html">Ngôn Tình</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="story-completed">
+            <div class="header">
+                <div class="header-title">Truyện đã hoàn thành</div>
+            </div>
+            <div class="completed-wrapper row-wrapper">
+                <div class="row">
+                    <a class="completed-item item-no-1" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-2" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-3" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-4" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-5" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-5" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+                </div>
+
+                <div class="row">
+                    <a class="completed-item item-no-1" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-2" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-3" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-4" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-5" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+    
+                    <a class="completed-item item-no-5" href="./story.html">
+                        <img src="./assets/img/de-ba.jpg" alt="">
+                        <div class="completed-item-title"><h3>Đế Bá</h3></div>
+                        <div class="completed-item-chapter"><div>Full - 1978 chương</div></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

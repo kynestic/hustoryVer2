@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/storyStyle.css">
+        <script src="https://kit.fontawesome.com/4a24fc7d8b.js" crossorigin="anonymous"></script>
+        <title>Đọc truyện online, đọc truyện hay</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="background-color: #F4F4F4;">
+        <div id="wrap">
+            <div id="nav">
+                <div class="container">
+                    <div class="logo">HuStory</div>
+                    <div class="controller">
+                        <div class="category nav-button-wrapper">
+                            <div class="nav-button">
+                                <i class="fa-solid fa-list"></i>
+                                Thể loại
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <div class="category-list nav-list">
+                                <div class="">
+                                    <ul class="dropdown-list">
+                                        <li><a href="">Tiên Hiệp</a></li>
+                                        <li><a href="">Kiếm hiệp</a></li>
+                                        <li><a href="">Ngôn Tình</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="">
+                                    <ul class="dropdown-list">
+                                        <li><a href="">Tiên Hiệp</a></li>
+                                        <li><a href="">Kiếm hiệp</a></li>
+                                        <li><a href="">Ngôn Tình</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="">
+                                    <ul class="dropdown-list">
+                                        <li><a href="">Tiên Hiệp</a></li>
+                                        <li><a href="">Kiếm hiệp</a></li>
+                                        <li><a href="">Ngôn Tình</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="length nav-button-wrapper">
+                            <div class="nav-button">
+                                <i class="fa-solid fa-list"></i>
+                                Độ dài
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <ul class="length-list nav-list dropdown-list">
+                                <li><a href="">Dưới 100 chương</a></li>
+                                <li><a href="">100-500 chương</a></li>
+                                <li><a href="">500-1000 chương</a></li>
+                                <li><a href="">Trên 1000 chương</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="setting nav-button-wrapper">
+                            <div class="nav-button">
+                                <i class="fa-solid fa-list"></i>
+                                Cài đặt
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+
+                            <ul class="setting-list nav-list dropdown-list">
+                                <li>
+                                    <a>
+                                        <label for="dark-mode">
+                                            <i class="fa-solid fa-moon"></i>
+                                            Darkmode
+                                        </label>
+                                        <input type="radio" name="theme" id="dark-mode">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <label for="light-mode">
+                                            <i class="fa-solid fa-sun"></i>
+                                            Lightmode
+                                        </label>
+                                        <input type="radio" name="theme" id="light-mode">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="search-box nav-button-wrapper">
+                            <div class="search-input">
+                                <input type="text" placeholder="Tìm truyện...">
+                            </div>
+                            <div class="search-button">
+                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="user-box nav-button-wrapper">
+                            <div class="nav-button">Đăng ký</div>
+                            <div class="nav-button">Đăng nhập</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="container">
+                    <div class="story-main">
+                        <div class="header">
+                            <div class="header-title">
+                                Thông tin truyện
+                            </div>
+                        </div>
+                        <div class="story-main-wrapper">
+                            <div class="story-info">
+                                <img src="./assets/img/de-ba.jpg" alt="" class="cover">
+                                <div class="info">
+                                    <div class="story-author">
+                                        <h3>Tác giả: </h3> 
+                                        <a href="" class="source">Yếm Bút Tiêu Sinh</a>
+                                    </div>
+                                    <div class="story-category">
+                                        <h3>Thể loại: </h3> 
+                                        <a href="" class="source">Huyền Huyễn</a>
+                                    </div>
+                                    <div class="story-og">
+                                        <h3>Nguồn cập nhật: </h3> 
+                                        <span class="source">Tàng thư Vip</span>
+                                    </div>
+                                    <div class="story-status">
+                                        <h3>Trạng thái: </h3> 
+                                        <span class="source">Đang ra</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="story-desc">
+                                <div class="story-title">Đế bá</div>
+                                <div class="story-rating">
+                                    <div class="rate-holder" data-score="7.5" style="cursor: pointer;">
+                                        <img alt="1" src="//static.8cache.com/lib/raty/images/star-on.png" title="Không còn gì để nói...">
+                                        <img alt="2" src="//static.8cache.com/lib/raty/images/star-on.png" title="WTF">
+                                        <img alt="3" src="//static.8cache.com/lib/raty/images/star-on.png" title="Cái gì thế này ?!">
+                                        <img alt="4" src="//static.8cache.com/lib/raty/images/star-on.png" title="Haizz">
+                                        <img alt="5" src="//static.8cache.com/lib/raty/images/star-on.png" title="Tạm">
+                                        <img alt="6" src="//static.8cache.com/lib/raty/images/star-on.png" title="Cũng được">
+                                        <img alt="7" src="//static.8cache.com/lib/raty/images/star-on.png" title="Khá đấy">
+                                        <img alt="8" src="//static.8cache.com/lib/raty/images/star-half.png" title="Được">
+                                        <img alt="9" src="//static.8cache.com/lib/raty/images/star-off.png" title="Hay">
+                                        <img alt="10" src="//static.8cache.com/lib/raty/images/star-off.png" title="Tuyệt đỉnh!">
+                                        <input name="score" type="hidden" value="7.5"></div>
+                                    <div class="rating">
+                                        Đánh giá: 
+                                        <strong class="score">7.5</strong>
+                                        /10 từ <strong class="rating-count"> 5463 Lượt</strong>
+                                    </div>
+                                </div>
+                                <div class="story-intro">
+                                    <div id="demo" class="desc-text collapse" aria-expanded="false" itemprop="description">
+                                        Ngàn vạn năm trước, Lý Thất Dạ trồng xuống một cây Thúy Trúc.
+                                        <br>
+                                        <br>
+                                        Tám trăm vạn năm trước, Lý Thất Dạ nuôi một đầu cá chép.
+                                        <br>
+                                        <br>
+                                        Năm trăm vạn năm trước, Lý Thất Dạ thu dưỡng một cái tiểu cô nương.
+                                        <br>
+                                        <br>
+                                        ... ... ... ... ...
+                                        <br>
+                                        <br>
+                                        Hôm nay, Lý Thất Dạ tỉnh lại sau giấc ngủ, Thúy Trúc tu luyện thành thần linh, cá chép hóa thành Kim Long, tiểu cô nương trở thành Cửu Giới Nữ Đế.
+                                        <br>
+                                        <br>
+                                        Đây là cố sự về một tiểu tử bất tử Nhân tộc dưỡng thành Yêu Thần, dưỡng thành Tiên thú, dưỡng thành Nữ Đế...
+                                    </div>
+
+                                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Xem thêm</button>
+                                </div>
+                                <div class="story-newest-chapter">
+                                    <div class="header">
+                                        <div class="header-title">Các chương mới nhất</div>
+                                    </div>
+                                    <div class="newest-chapter-wrapper">
+                                        <ul>
+                                            <li class="newest-chapter-1"><i class="fa-solid fa-angle-right"></i><a href="">Chương 2010: Đàm tiếu phong vân (1)</a></li>
+                                            <li class="newest-chapter 2"><i class="fa-solid fa-angle-right"></i><a href="">Chương 2009: Đàm tiếu phong vân (2)</a></li>
+                                            <li class="newest-chapter 3"><i class="fa-solid fa-angle-right"></i><a href="">Chương 2008: Đàm tiếu phong vân (3)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="story-chapter-list">
+                            <div class="header">
+                                <div class="header-title">
+                                    Danh sách chương
+                                </div>
+                            </div>
+
+                            <div class="chapter-list-wrapper">
+                                <ul>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>1</span>: <span>Tam Quỷ Gia (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>1</span>: <span>Tam Quỷ Gia (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>2</span>: <span>Tam Quỷ Gia (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>3</span>: <span>Tẩy Nhan Cổ Phái (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>4</span>: <span>Tẩy Nhan Cổ Phái (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>5</span>: <span>Vị hôn thê (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>6</span>: <span>Vị hôn thê (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>7</span>: <span>Cửu Thánh yêu môn (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>8</span>: <span>Cửu Thánh yêu môn (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>9</span>: <span>Giết người không chớp mắt (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>10</span>: <span>Giết người không chớp mắt (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>11</span>: <span>Là ta ngang ngược, ương ngạnh (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>12</span>: <span>Là ta ngang ngược, ương ngạnh (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>13</span>: <span>Rừng Loạn Tâm (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>14</span>: <span>Rừng Loạn Tâm (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>15</span>: <span>Kì tích trong tay ta (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>16</span>: <span>Kỳ tích trong tay ta (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>17</span>: <span>Luân Nhật Yêu Hoàng (Thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>18</span>: <span>Luân Nhật Yêu Hoàng (Hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>19</span>: <span>Ương ngạnh không cần nhìn địa phương (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>20</span>: <span>Ngang ngạnh bất cứ đâu! (Hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>21</span>: <span>Thánh Động (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>22</span>: <span>Thánh động (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>23</span>: <span>Cửu Thánh công chúa (Thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>24</span>: <span>Cửu Thánh công chúa (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>25</span>: <span>Thần Nha Phong (Thượng)</span></a></li>
+                                </ul>
+
+                                <ul>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>1</span>: <span>Tam Quỷ Gia (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>1</span>: <span>Tam Quỷ Gia (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>2</span>: <span>Tam Quỷ Gia (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>3</span>: <span>Tẩy Nhan Cổ Phái (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>4</span>: <span>Tẩy Nhan Cổ Phái (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>5</span>: <span>Vị hôn thê (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>6</span>: <span>Vị hôn thê (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>7</span>: <span>Cửu Thánh yêu môn (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>8</span>: <span>Cửu Thánh yêu môn (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>9</span>: <span>Giết người không chớp mắt (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>10</span>: <span>Giết người không chớp mắt (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>11</span>: <span>Là ta ngang ngược, ương ngạnh (1)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>12</span>: <span>Là ta ngang ngược, ương ngạnh (2)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>13</span>: <span>Rừng Loạn Tâm (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>14</span>: <span>Rừng Loạn Tâm (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>15</span>: <span>Kì tích trong tay ta (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>16</span>: <span>Kỳ tích trong tay ta (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>17</span>: <span>Luân Nhật Yêu Hoàng (Thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>18</span>: <span>Luân Nhật Yêu Hoàng (Hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>19</span>: <span>Ương ngạnh không cần nhìn địa phương (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>20</span>: <span>Ngang ngạnh bất cứ đâu! (Hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>21</span>: <span>Thánh Động (thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>22</span>: <span>Thánh động (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>23</span>: <span>Cửu Thánh công chúa (Thượng)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>24</span>: <span>Cửu Thánh công chúa (hạ)</span></a></li>
+                                    <li><a href="">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                        Chương <span>25</span>: <span>Thần Nha Phong (Thượng)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="story-side">
+                        <div class="same-author">
+                            <div class="header">
+                                <div class="header-title">
+                                    Cùng tác giả
+                                </div>
+                            </div>
+
+                            <div class="same-author-story">
+                                <ul>
+                                    <li><i class="fa-solid fa-angle-right"></i><a href=""> Huyết Trùng Tiên Khung</a></li>
+                                    <li><i class="fa-solid fa-angle-right"></i><a href=""> Linh Vũ Thiên Hạ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="story-popular">
+                            <div class="header">
+                                <div class="header-title">
+                                    Truyện đang hot
+                                </div>
+                            </div>
+                            <div class="popular-table">
+                                <div class="popular-table-option">
+                                    <ul>
+                                        <li><a href="">Ngày</a></li>
+                                        <li><a href="">Tháng</a></li>
+                                        <li><a href="">Năm</a></li>
+                                    </ul>
+                                </div>
+                                <div class="popular-table-content">
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            1
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            2
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            3
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            4
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            5
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            6
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            7
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            8
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            9
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular-table-item">
+                                        <div class="rank">
+                                            10
+                                        </div>
+    
+                                        <div class="table-item-content">
+                                            <div class="table-item-name">
+                                                <a href="./chapter.html">Thần Đạo Đan Tôn</a>
+                                            </div>
+    
+                                            <div class="table-item-category">
+                                                <a href="./list.html">Tiên Hiệp</a>,
+                                                <a href="./list.html">Huyền Huyễn</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
