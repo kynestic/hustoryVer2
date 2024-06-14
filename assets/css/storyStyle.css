@@ -281,12 +281,13 @@ html{
 /* Danh sách các chương truyện */
 
 .story-main .story-chapter-list .chapter-list-wrapper{
+    height: 500px;
+    overflow: scroll;
     margin-top: 16px;
 }
 
 .story-main .story-chapter-list .chapter-list-wrapper>ul{
-    width: 48%;
-    display: inline-block;
+    display: block;
 }
 
 .story-chapter-list .chapter-list-wrapper>ul li{
@@ -439,5 +440,11 @@ html{
 .popular-table-item .table-item-content .table-item-category a{
     color: var(--lightmode_text);
     font-size: 12px;
+}
+
+#footer{
+    height: 160px;
+    background-color: var(--theme_color);
+    margin-top: 240px;
 }
 

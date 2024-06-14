@@ -225,6 +225,8 @@ html{
 
 .chapter-header .header-chapter-name a{
     color: var(--lightmode_text);
+    text-decoration: none;
+    cursor:auto;
 }
 
 .control-bar{
