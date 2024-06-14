@@ -126,6 +126,7 @@ html{
     font-size: 16px;
     padding: 4px 8px;
     border-left: #ccc solid 1px ;
+    cursor: pointer;
 }
 
 #nav .search-box .search-button a{
@@ -330,7 +331,7 @@ html{
 }
 
 #story-completed .completed-wrapper .completed-item img{
-    width: 160px;
+    width: 155px;
 }
 
 #story-completed .completed-wrapper .completed-item{

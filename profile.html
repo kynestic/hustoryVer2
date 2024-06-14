@@ -20,7 +20,7 @@
         <div id="wrap" >
             <div id="nav">
                 <div class="container">
-                    <div class="logo">HuStory</div>
+                    <div class="logo"><a style="text-decoration: none; color: white;"  href="../home">HuStory</a></div>
                     <div class="controller">
                         <div class="category nav-button-wrapper">
                             <div class="nav-button">
@@ -100,10 +100,10 @@
 
                         <div class="search-box nav-button-wrapper">
                             <div class="search-input">
-                                <input type="text" placeholder="Tìm truyện...">
+                                <input id ="searchInput" type="text" placeholder="Tìm truyện...">
                             </div>
                             <div class="search-button">
-                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <a id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></a>
                             </div>
                         </div>
 
@@ -187,5 +187,18 @@
             </div>
 
         </div>  
+        <script>
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+        
+            searchButton.onclick = function(){
+                let searchValue = searchInput.value;
+                searchValue = searchValue.replace(/ +(?= )/g,'');
+                if (searchValue)
+                    window.location.href = '../' + 'search/' + searchValue;
+                else
+                    window.location.href = '../' + 'search/all';
+            }
+        </script>
     </body>
 </html>

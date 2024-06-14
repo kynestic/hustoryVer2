@@ -21,7 +21,7 @@
         <div id="wrap">
             <div id="nav">
                 <div class="container">
-                    <div class="logo">HuStory</div>
+                    <div class="logo"><a style="text-decoration: none; color: white;"  href="../home">HuStory</a></div>
                     <div class="controller">
                         <div class="category nav-button-wrapper">
                             <div class="nav-button">
@@ -30,30 +30,30 @@
                                 <i class="fa-solid fa-caret-down"></i>
                             </div>
                             <div class="category-list nav-list">
-                                <div class="">
-                                    <ul class="dropdown-list">
-                                        <li><a href="">Tiên Hiệp</a></li>
-                                        <li><a href="">Kiếm hiệp</a></li>
-                                        <li><a href="">Ngôn Tình</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="">
-                                    <ul class="dropdown-list">
-                                        <li><a href="">Tiên Hiệp</a></li>
-                                        <li><a href="">Kiếm hiệp</a></li>
-                                        <li><a href="">Ngôn Tình</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="">
-                                    <ul class="dropdown-list">
-                                        <li><a href="">Tiên Hiệp</a></li>
-                                        <li><a href="">Kiếm hiệp</a></li>
-                                        <li><a href="">Ngôn Tình</a></li>
-                                    </ul>
-                                </div>
+                            <div class="">
+                                <ul class="dropdown-list">
+                                    <li><a href="../../search/category/4">Tiên Hiệp</a></li>
+                                    <li><a href="../../search/category/5">Kiếm hiệp</a></li>
+                                    <li><a href="../../search/category/7">Xuyên Không</a></li>
+                                </ul>
                             </div>
+
+                            <div class="">
+                                <ul class="dropdown-list">
+                                    <li><a href="../../search/category/8">Linh Dị</a></li>
+                                    <li><a href="../../search/category/9">Trinh Thám</a></li>
+                                    <li><a href="../../search/category/3">Đô Thị</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="">
+                                <ul class="dropdown-list">
+                                    <li><a href="../../search/category/1">Huyền Huyễn</a></li>
+                                    <li><a href="../../search/category/2">Khoa Huyễn</a></li>
+                                    <li><a href="../../search/category/6">Dị Giới</a></li>
+                                </ul>
+                            </div>
+                        </div>
                         </div>
 
                         <div class="length nav-button-wrapper">
@@ -101,10 +101,10 @@
 
                         <div class="search-box nav-button-wrapper">
                             <div class="search-input">
-                                <input type="text" placeholder="Tìm truyện...">
+                                <input id ="searchInput" type="text" placeholder="Tìm truyện...">
                             </div>
                             <div class="search-button">
-                                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <a id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></a>
                             </div>
                         </div>
 
@@ -403,6 +403,17 @@
 
         <div id="footer"></div>
         <script>
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+        
+            searchButton.onclick = function(){
+                let searchValue = searchInput.value;
+                searchValue = searchValue.replace(/ +(?= )/g,'');
+                if (searchValue)
+                window.location.href = '../' + 'search/' + searchValue;
+            }
+
+
             const currentURL = window.location.href;
 
             const urlObject = new URL(currentURL);

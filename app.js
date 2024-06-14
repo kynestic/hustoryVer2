@@ -46,7 +46,28 @@ app.get('/assets/css/style.css', (req, res) => {
 });
 
 app.get('/getLatest' , (req, res) =>{ 
-  const sql = 'SELECT chapterName, chapterNumber, publishTime FROM chapter ORDER BY publishTime DESC LIMIT 15;'
+  const sql = 'SELECT story.storyId, chapter.chapterId, story.storyName, chapter.chapterNumber, chapter.chapterNumber, chapter.publishTime FROM chapter JOIN story ON story.storyId = chapter.storyId ORDER BY chapter.publishTime DESC LIMIT 15;'
+  connection.query(sql, (err, results) =>{
+    if (err) {
+      console.error('Error querying database:', err);
+      res.status(500).json({ error: 'Internal server error' });
+      return;
+    }
+
+    // Kiểm tra xem có kết quả nào không
+    if (results.length === 0) {
+      res.status(404).json({ error: 'Story not found' });
+      return;
+    }
+
+    // Trả về dữ liệu của story
+    const story = results;
+    res.json(story);
+  });
+}); 
+
+app.get('/getComplete' , (req, res) =>{ 
+  const sql = "SELECT s.storyStatus, s.storyImg, s.storyId, s.storyName, COUNT(c.chapterId) AS chapterCount FROM story s LEFT JOIN chapter c ON s.storyId = c.storyId WHERE s.storyStatus = 'Full' GROUP BY s.storyId, s.storyName;"
   connection.query(sql, (err, results) =>{
     if (err) {
       console.error('Error querying database:', err);
@@ -294,6 +315,105 @@ app.get('/popular', (req, res) => {
   });
 });
 
+
+app.get('/search/category/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'list.html'));
+});
+
+app.get('/assets/css/list.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'assets', 'css', 'list.css'));
+});
+
+app.get('/search/category/:id/getContent', (req, res) => {
+  const categoryId = req.params.id;
+  const sql = `
+  SELECT 
+    s.storyId,
+    s.storyName,
+    s.storyIntro,
+    s.storyRating,
+    s.storyAuthor,
+    s.storyImg,
+    s.storyStatus,
+    c.categoryName,
+    COUNT(ch.chapterId) AS totalChapters
+  FROM 
+      story s
+  JOIN 
+      story_category sc ON s.storyId = sc.storyId
+  JOIN 
+      category c ON sc.categoryId = c.categoryId
+  LEFT JOIN
+      chapter ch ON s.storyId = ch.storyId
+  WHERE 
+      sc.categoryId = ?
+  GROUP BY
+    s.storyId, s.storyName, s.storyIntro, s.storyRating, s.storyAuthor, s.storyImg, s.storyStatus, c.categoryName;
+
+  `;
+  
+  connection.query(sql, [categoryId] , (err, results) => {
+    if (err) {
+      console.error('Error querying database:', err);
+      res.status(500).json({ error: 'Internal server error' });
+      return;
+    }
+    
+    if (results.length === 0) {
+      res.status(404).json({ error: 'Story not found or has no categories' });
+      return;
+    }
+    
+    res.json(results);
+  });
+});
+
+
+
+app.get('/search/:name', (req, res) => {
+  res.sendFile(path.join(__dirname, 'list.html'));
+});
+
+app.get('/assets/css/list.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'assets', 'css', 'list.css'));
+});
+
+app.get('/search/:name/getContent', (req, res) => {
+  const storyName = req.params.name;
+  const sql = `
+  SELECT 
+      s.storyId,
+      s.storyName,
+      s.storyIntro,
+      s.storyRating,
+      s.storyAuthor,
+      s.storyImg,
+      s.storyStatus,
+  COUNT(ch.chapterId) AS totalChapters
+  FROM 
+      story s
+  LEFT JOIN
+      chapter ch ON s.storyId = ch.storyId
+  WHERE 
+      s.storyName LIKE CONCAT('%', ?, '%')
+  GROUP BY
+      s.storyId, s.storyName, s.storyIntro, s.storyRating, s.storyAuthor, s.storyImg, s.storyStatus;`;
+  
+  connection.query(sql, [storyName] , (err, results) => {
+    if (err) {
+      console.error('Error querying database:', err);
+      res.status(500).json({ error: 'Internal server error' });
+      return;
+    }
+    
+    if (results.length === 0) {
+      res.status(404).json({ error: 'Story not found or has no categories' });
+      return;
+    }
+    
+    res.json(results);
+  });
+});
 
 
 // Bắt đầu server

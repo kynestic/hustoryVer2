@@ -163,6 +163,7 @@ html{
     font-size: 16px;
     padding: 4px 8px;
     border-left: #ccc solid 1px ;
+    cursor: pointer;
 }
 
 #nav .search-box .search-button a{
@@ -194,13 +195,16 @@ html{
 
 #content .list-content {
     margin-top: 40px;
-
+    
 }
 
 #content .list-content .list-item{
     display: inline-block;
     text-align: center;
-    padding: 10px;
+    margin-right: 10px;
+    width: 150px;
+    margin-bottom: 20px;
+
 }
 
 #content .list-content .list-item img{
@@ -211,6 +215,10 @@ html{
     font-weight: 600;
     font-size: 16px;
     color: var(--lightmode_text);
+    width: 150px;
+    height: 25px;
+    overflow: hidden;
+
 }
 
 .list-content .list-item .item-newest-chapter{
