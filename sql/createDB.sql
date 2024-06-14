@@ -11,7 +11,8 @@ CREATE TABLE story (
     storyRating DECIMAL(3,2),
     storyAuthor VARCHAR(255),
     storyImg VARCHAR(255),
-    storyStatus VARCHAR(50)
+    storyStatus VARCHAR(50),
+    views INT DEFAULT 0
 );
 
 CREATE TABLE chapter (
@@ -21,12 +22,8 @@ CREATE TABLE chapter (
     chapterName VARCHAR(255),
     chapterContent TEXT,
     publishTime TIMESTAMP,
-    views INT DEFAULT 0,
     FOREIGN KEY (storyId) REFERENCES story(storyId)
 );
-
-alter table chapter
-modify publishTime TIMESTAMP;
 
 CREATE TABLE user_t (
     userId INT AUTO_INCREMENT PRIMARY KEY,
@@ -43,10 +40,16 @@ CREATE TABLE user_t (
     userBio TEXT
 );
 
+CREATE TABLE category(
+	categoryId INT NOT NULL PRIMARY KEY,
+	categoryName VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE story_category (
     storyId INT NOT NULL,
-    categoryName VARCHAR(255) NOT NULL,
-    FOREIGN KEY (storyId) REFERENCES story(storyId)
+    categoryId INT NOT NULL,
+    FOREIGN KEY (storyId) REFERENCES story(storyId),
+    FOREIGN KEY (categoryId) REFERENCES category(categoryId)
 );
 
 CREATE TABLE user_follow_story (

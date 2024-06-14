@@ -108,7 +108,7 @@
                     </div>
 
                     <div class="user-box nav-button-wrapper">
-                        <div class="nav-button">Đăng ký</div>
+                        <div class="nav-button" href="">Đăng ký</div>
                         <div class="nav-button">Đăng nhập</div>
                     </div>
                 </div>
@@ -194,6 +194,18 @@
         const id1 = parts[2]; // Phần thứ 3 là id1 (vì phần tử đầu tiên là một chuỗi rỗng sau 'http://example.com')
         const id2 = parts[4]; // Phần thứ 5 là id2
         console.log(id1 + ' ' +id2);
+        
+        fetch('/story/' + id1 + '/incrementView', {
+          method: 'PUT'
+        })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Views updated:', data.message);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+
         fetch('/story/' + id1 + '/chapter/' + id2 + '/getContent')
             .then(response => response.json()) // Đọc phản hồi dưới dạng JSON
             .then(chapters => {
