@@ -5,6 +5,7 @@ const port = 3000;
 const mysql = require('mysql2');
 const { json } = require('express/lib/response');
 
+//Hàm tạo kết nối đến CSDL
 const connection = mysql.createConnection({
   host: 'localhost', // hoặc '127.0.0.1'
   port: 3306,
@@ -296,7 +297,7 @@ app.get('/popular', (req, res) => {
     SELECT *
     FROM story
     ORDER BY views DESC
-    LIMIT 10;  
+    LIMIT 16;  
   `;
   
   connection.query(sql, (err, results) => {

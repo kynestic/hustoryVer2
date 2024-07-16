@@ -204,6 +204,35 @@
         const id1 = parts[2]; // Phần thứ 3 là id1 (vì phần tử đầu tiên là một chuỗi rỗng sau 'http://example.com')
         const id2 = parts[4]; // Phần thứ 5 là id2
         console.log(id1 + ' ' +id2);
+
+        fetch('/story/getChapter/'+ id2)
+                .then(response => response.json())
+                .then(chapters=>{
+                    
+                    for (let i = 0; chapters[i]; i++) {
+
+                        let parent = document.querySelector('.chapter-list-wrapper ul');
+                        let ele = document.createElement('li');
+                        ele.appendChild( document.createElement('a'));
+                        ele.style.listStyle = 'none';
+                        ele.style.display = 'block';
+
+                        let sub = ele.firstElementChild;
+                        sub.style.color = 'black';
+                        sub.style.display = 'inline-block';
+                        sub.style.padding = '4px';
+                        sub.attributes='color: black; display: inline-block; padding: 4px;';
+                        
+                        sub.innerText = 'Chương '+ chapters[i].chapterNumber +": " + chapters[i].chapterName;
+                        let src = './'+ id+ '/chapter/' + chapters[i].chapterId;
+                        sub.href = src;
+
+                        parent.appendChild(ele);
+                    };
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                })
         
         fetch('/story/' + id1 + '/incrementView', {
           method: 'PUT'
